@@ -1,0 +1,35 @@
+{
+  "name": "valgrind-supp",
+  "displayName": "Valgrind Suppression Files",
+  "description": "Syntax highlighting for Valgrind suppression files",
+  "version": "0.0.1",
+  "keywords": ["valgrind"],
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "publisher": "lamm45",
+  "engines": {
+    "vscode": "^1.64.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "valgrind-supp",
+      "aliases": ["Valgrind Suppression File", "valgrind-supp"],
+      "extensions": [".supp"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "valgrind-supp",
+      "scopeName": "source.supp",
+      "path": "./syntaxes/valgrind-supp.tmGrammar.json"
+    }]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lamm45/vscode-valgrind-supp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lamm45/vscode-valgrind-supp/issues"
+  }
+}

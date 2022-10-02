@@ -1,0 +1,40 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Valgrind Suppression File",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"name": "entity.name.section.supp",
+			"begin": "^{$",
+			"end": "^}$",
+			"patterns": [
+				{
+					"include": "#comments"
+				},
+				{
+					"name": "keyword.other.supp",
+					"match": "\\s*(obj:|fun:|src:)"
+				},
+				{
+					"name": "keyword.control.supp",
+					"match": "^\\s*\\.\\.\\."
+				}
+			]
+		},
+		{
+			"name": "invalid.illegal.supp",
+			"match": ".*"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.number-sign.supp",
+				"match": "^\\s*#.*"
+			}]
+		}
+	},
+	"scopeName": "source.supp"
+}
